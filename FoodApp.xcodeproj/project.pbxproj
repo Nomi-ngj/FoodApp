@@ -7,18 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8CABF8512C53AC9E003E4297 /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8502C53AC9E003E4297 /* FoodAppApp.swift */; };
+		8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8502C53AC9E003E4297 /* FoodApp.swift */; };
 		8CABF8532C53AC9E003E4297 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8522C53AC9E003E4297 /* ContentView.swift */; };
 		8CABF8552C53ACA0003E4297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8542C53ACA0003E4297 /* Assets.xcassets */; };
 		8CABF8582C53ACA0003E4297 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */; };
+		8CABF8602C53F3D5003E4297 /* TabViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF85E2C53F3D5003E4297 /* TabViewType.swift */; };
+		8CABF8612C53F3D5003E4297 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF85F2C53F3D5003E4297 /* TabBarController.swift */; };
+		8CABF8632C53F3F9003E4297 /* ElevationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */; };
+		8CABF8672C53F455003E4297 /* ViewSafeArea+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */; };
+		8CABF8692C53F45A003E4297 /* MockVerticalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */; };
+		8CABF86B2C53F49C003E4297 /* ButtonBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF86A2C53F49C003E4297 /* ButtonBase.swift */; };
+		8CABF8732C54013D003E4297 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8722C54013D003E4297 /* Color+Hex.swift */; };
+		8CABF8762C5409BB003E4297 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8752C5409BB003E4297 /* SplashScreenView.swift */; };
+		8CABF8782C540F06003E4297 /* MockTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8772C540F06003E4297 /* MockTabView.swift */; };
+		8CABF87C2C541083003E4297 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF87B2C541083003E4297 /* Fonts.swift */; };
+		8CABF87E2C541152003E4297 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF87D2C541152003E4297 /* Theme.swift */; };
+		8CABF8862C54119C003E4297 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8802C54119C003E4297 /* Poppins-SemiBold.ttf */; };
+		8CABF8872C54119C003E4297 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8812C54119C003E4297 /* Poppins-Bold.ttf */; };
+		8CABF8882C54119C003E4297 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8822C54119C003E4297 /* Poppins-Black.ttf */; };
+		8CABF8892C54119C003E4297 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8832C54119C003E4297 /* Poppins-Light.ttf */; };
+		8CABF88A2C54119C003E4297 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8842C54119C003E4297 /* Poppins-Medium.ttf */; };
+		8CABF88B2C54119C003E4297 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8852C54119C003E4297 /* Poppins-Regular.ttf */; };
+		8CABF88D2C54146C003E4297 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */; };
+		8CABF88F2C5414E0003E4297 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF88E2C5414E0003E4297 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CABF84D2C53AC9E003E4297 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CABF8502C53AC9E003E4297 /* FoodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppApp.swift; sourceTree = "<group>"; };
+		8CABF8502C53AC9E003E4297 /* FoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp.swift; sourceTree = "<group>"; };
 		8CABF8522C53AC9E003E4297 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CABF8542C53ACA0003E4297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8CABF85E2C53F3D5003E4297 /* TabViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewType.swift; sourceTree = "<group>"; };
+		8CABF85F2C53F3D5003E4297 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationModifier.swift; sourceTree = "<group>"; };
+		8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewSafeArea+Ext.swift"; sourceTree = "<group>"; };
+		8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVerticalListView.swift; sourceTree = "<group>"; };
+		8CABF86A2C53F49C003E4297 /* ButtonBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBase.swift; sourceTree = "<group>"; };
+		8CABF86D2C53F795003E4297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8CABF8722C54013D003E4297 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		8CABF8752C5409BB003E4297 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		8CABF8772C540F06003E4297 /* MockTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabView.swift; sourceTree = "<group>"; };
+		8CABF87B2C541083003E4297 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8CABF87D2C541152003E4297 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8CABF8802C54119C003E4297 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		8CABF8812C54119C003E4297 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		8CABF8822C54119C003E4297 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		8CABF8832C54119C003E4297 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		8CABF8842C54119C003E4297 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		8CABF8852C54119C003E4297 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
+		8CABF88E2C5414E0003E4297 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +90,15 @@
 		8CABF84F2C53AC9E003E4297 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				8CABF8502C53AC9E003E4297 /* FoodAppApp.swift */,
+				8CABF8902C541A29003E4297 /* Extension */,
+				8CABF87F2C541192003E4297 /* Fonts */,
+				8CABF87A2C541076003E4297 /* Theme */,
+				8CABF8792C54105C003E4297 /* View */,
+				8CABF8742C5409B2003E4297 /* Splash */,
+				8CABF8712C53FEEB003E4297 /* TabbarController */,
+				8CABF86D2C53F795003E4297 /* Info.plist */,
+				8CABF85E2C53F3D5003E4297 /* TabViewType.swift */,
+				8CABF8502C53AC9E003E4297 /* FoodApp.swift */,
 				8CABF8522C53AC9E003E4297 /* ContentView.swift */,
 				8CABF8542C53ACA0003E4297 /* Assets.xcassets */,
 				8CABF8562C53ACA0003E4297 /* Preview Content */,
@@ -65,6 +112,66 @@
 				8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CABF8712C53FEEB003E4297 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */,
+				8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */,
+				8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */,
+				8CABF85F2C53F3D5003E4297 /* TabBarController.swift */,
+				8CABF8772C540F06003E4297 /* MockTabView.swift */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		8CABF8742C5409B2003E4297 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8752C5409BB003E4297 /* SplashScreenView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		8CABF8792C54105C003E4297 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF86A2C53F49C003E4297 /* ButtonBase.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CABF87A2C541076003E4297 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF87B2C541083003E4297 /* Fonts.swift */,
+				8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */,
+				8CABF87D2C541152003E4297 /* Theme.swift */,
+				8CABF88E2C5414E0003E4297 /* AppColor.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		8CABF87F2C541192003E4297 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8822C54119C003E4297 /* Poppins-Black.ttf */,
+				8CABF8812C54119C003E4297 /* Poppins-Bold.ttf */,
+				8CABF8832C54119C003E4297 /* Poppins-Light.ttf */,
+				8CABF8842C54119C003E4297 /* Poppins-Medium.ttf */,
+				8CABF8852C54119C003E4297 /* Poppins-Regular.ttf */,
+				8CABF8802C54119C003E4297 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8CABF8902C541A29003E4297 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8722C54013D003E4297 /* Color+Hex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +232,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CABF8892C54119C003E4297 /* Poppins-Light.ttf in Resources */,
+				8CABF8882C54119C003E4297 /* Poppins-Black.ttf in Resources */,
+				8CABF88B2C54119C003E4297 /* Poppins-Regular.ttf in Resources */,
+				8CABF8862C54119C003E4297 /* Poppins-SemiBold.ttf in Resources */,
+				8CABF8872C54119C003E4297 /* Poppins-Bold.ttf in Resources */,
+				8CABF88A2C54119C003E4297 /* Poppins-Medium.ttf in Resources */,
 				8CABF8582C53ACA0003E4297 /* Preview Assets.xcassets in Resources */,
 				8CABF8552C53ACA0003E4297 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +250,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CABF8692C53F45A003E4297 /* MockVerticalListView.swift in Sources */,
+				8CABF8782C540F06003E4297 /* MockTabView.swift in Sources */,
 				8CABF8532C53AC9E003E4297 /* ContentView.swift in Sources */,
-				8CABF8512C53AC9E003E4297 /* FoodAppApp.swift in Sources */,
+				8CABF8632C53F3F9003E4297 /* ElevationModifier.swift in Sources */,
+				8CABF87E2C541152003E4297 /* Theme.swift in Sources */,
+				8CABF87C2C541083003E4297 /* Fonts.swift in Sources */,
+				8CABF8612C53F3D5003E4297 /* TabBarController.swift in Sources */,
+				8CABF88D2C54146C003E4297 /* LocalizedConstants.swift in Sources */,
+				8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */,
+				8CABF86B2C53F49C003E4297 /* ButtonBase.swift in Sources */,
+				8CABF8602C53F3D5003E4297 /* TabViewType.swift in Sources */,
+				8CABF88F2C5414E0003E4297 /* AppColor.swift in Sources */,
+				8CABF8672C53F455003E4297 /* ViewSafeArea+Ext.swift in Sources */,
+				8CABF8732C54013D003E4297 /* Color+Hex.swift in Sources */,
+				8CABF8762C5409BB003E4297 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +400,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +430,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
