@@ -33,6 +33,7 @@
 		8CABF8962C54523D003E4297 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8952C54523D003E4297 /* AppImages.swift */; };
 		8CABF8982C54557B003E4297 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8972C54557B003E4297 /* TextFieldModifier.swift */; };
 		8CABF89C2C54564C003E4297 /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */; };
+		8CABF89E2C546289003E4297 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF89D2C546289003E4297 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		8CABF8952C54523D003E4297 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		8CABF8972C54557B003E4297 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
+		8CABF89D2C546289003E4297 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8CABF8932C544AF8003E4297 /* LoginView.swift */,
+				8CABF89D2C546289003E4297 /* LoginViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				8CABF8672C53F455003E4297 /* ViewSafeArea+Ext.swift in Sources */,
 				8CABF8732C54013D003E4297 /* Color+Hex.swift in Sources */,
 				8CABF8942C544AF8003E4297 /* LoginView.swift in Sources */,
+				8CABF89E2C546289003E4297 /* LoginViewModel.swift in Sources */,
 				8CABF8762C5409BB003E4297 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

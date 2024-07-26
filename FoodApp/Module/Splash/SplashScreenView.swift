@@ -15,7 +15,8 @@ struct SplashScreenView: View {
     @State private var logoOpacity = 0.0
     @State private var taglineOpacity = 0.0
     @State private var taglineOffset: CGFloat = 0
-
+    @Environment(\.colorScheme) private var colorScheme
+    
     var body: some View {
         VStack {
             Spacer()
@@ -45,10 +46,10 @@ struct SplashScreenView: View {
             
             Spacer()
         }
-        .background(Theme.color.whiteColor.edgesIgnoringSafeArea(.all)) // Set background color as needed
+        .background((colorScheme == .light ? Theme.color.whiteColor : Theme.color.blackColor).edgesIgnoringSafeArea(.all)) // Set background color as needed
         .onAppear {
             // Duration of splash screen before transitioning to the next view
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 13) {
                 // Navigate to the next view or perform your transition
                 withAnimation {
                     showSplash = false
