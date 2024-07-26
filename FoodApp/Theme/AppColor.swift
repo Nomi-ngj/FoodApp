@@ -16,7 +16,6 @@ extension Notification.Name {
     /// Notification name for updating home.
 }
 
-
 /**
  Enumeration for different color themes.
  */

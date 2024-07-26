@@ -13,11 +13,13 @@ struct Theme {
     static let fonts = Fonts()
     
     /// The localized constants.
-    static var localized = LocalizedConstants()
-//    
+    static let localized = LocalizedConstants()
+//
 //    /// The color theme.
     static let color = AppColor(rawValue: AppColor.current.rawValue)!
 //
+    /// The localized constants.
+    static let images = AppImages()
 //    /// The alert controller for displaying alerts.
 //    static let alert = AlertController()
 //    

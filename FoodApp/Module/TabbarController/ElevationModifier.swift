@@ -25,6 +25,8 @@ extension View {
         applyShadow(color: .gray.opacity(0.6), radius: 2, x: 0, y: 2)
     }
     
+    
+    
     private func applyShadow(color: Color = Color.black.opacity(0.2), radius: CGFloat = 5, x: CGFloat = 0, y: CGFloat = 2) -> some View {
         modifier(ElevationModifier(color: color, radius: radius, x: x, y: y))
     }

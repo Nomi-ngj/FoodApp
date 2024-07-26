@@ -48,7 +48,7 @@ struct SplashScreenView: View {
         .background(Color.white.edgesIgnoringSafeArea(.all)) // Set background color as needed
         .onAppear {
             // Duration of splash screen before transitioning to the next view
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 // Navigate to the next view or perform your transition
                 withAnimation {
                     showSplash = false

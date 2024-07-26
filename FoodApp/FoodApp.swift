@@ -17,9 +17,10 @@ struct FoodAppApp: App {
                 if showSplash {
                     SplashScreenView(showSplash: $showSplash)
                 } else {
-                    TabBarController(tabs: TabViewType.allCases.map { viewType in
-                        TabBarController.TabItem(viewType: viewType)
-                    })
+                    LoginView()
+//                    TabBarController(tabs: TabViewType.allCases.map { viewType in
+//                        TabBarController.TabItem(viewType: viewType)
+//                    })
                 }
             }
         }

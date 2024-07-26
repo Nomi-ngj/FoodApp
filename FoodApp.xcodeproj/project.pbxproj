@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8502C53AC9E003E4297 /* FoodApp.swift */; };
-		8CABF8532C53AC9E003E4297 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8522C53AC9E003E4297 /* ContentView.swift */; };
 		8CABF8552C53ACA0003E4297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8542C53ACA0003E4297 /* Assets.xcassets */; };
 		8CABF8582C53ACA0003E4297 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */; };
 		8CABF8602C53F3D5003E4297 /* TabViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF85E2C53F3D5003E4297 /* TabViewType.swift */; };
@@ -30,12 +29,15 @@
 		8CABF88B2C54119C003E4297 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8852C54119C003E4297 /* Poppins-Regular.ttf */; };
 		8CABF88D2C54146C003E4297 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */; };
 		8CABF88F2C5414E0003E4297 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF88E2C5414E0003E4297 /* AppColor.swift */; };
+		8CABF8942C544AF8003E4297 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8932C544AF8003E4297 /* LoginView.swift */; };
+		8CABF8962C54523D003E4297 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8952C54523D003E4297 /* AppImages.swift */; };
+		8CABF8982C54557B003E4297 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8972C54557B003E4297 /* TextFieldModifier.swift */; };
+		8CABF89C2C54564C003E4297 /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CABF84D2C53AC9E003E4297 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CABF8502C53AC9E003E4297 /* FoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp.swift; sourceTree = "<group>"; };
-		8CABF8522C53AC9E003E4297 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CABF8542C53ACA0003E4297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CABF85E2C53F3D5003E4297 /* TabViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewType.swift; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		8CABF8852C54119C003E4297 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
 		8CABF88E2C5414E0003E4297 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		8CABF8932C544AF8003E4297 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8CABF8952C54523D003E4297 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		8CABF8972C54557B003E4297 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +96,13 @@
 		8CABF84F2C53AC9E003E4297 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				8CABF8912C544ACB003E4297 /* Module */,
 				8CABF8902C541A29003E4297 /* Extension */,
 				8CABF87F2C541192003E4297 /* Fonts */,
 				8CABF87A2C541076003E4297 /* Theme */,
 				8CABF8792C54105C003E4297 /* View */,
-				8CABF8742C5409B2003E4297 /* Splash */,
-				8CABF8712C53FEEB003E4297 /* TabbarController */,
 				8CABF86D2C53F795003E4297 /* Info.plist */,
-				8CABF85E2C53F3D5003E4297 /* TabViewType.swift */,
 				8CABF8502C53AC9E003E4297 /* FoodApp.swift */,
-				8CABF8522C53AC9E003E4297 /* ContentView.swift */,
 				8CABF8542C53ACA0003E4297 /* Assets.xcassets */,
 				8CABF8562C53ACA0003E4297 /* Preview Content */,
 			);
@@ -117,6 +120,7 @@
 		8CABF8712C53FEEB003E4297 /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
+				8CABF85E2C53F3D5003E4297 /* TabViewType.swift */,
 				8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */,
 				8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */,
 				8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */,
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				8CABF86A2C53F49C003E4297 /* ButtonBase.swift */,
+				8CABF8972C54557B003E4297 /* TextFieldModifier.swift */,
+				8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 				8CABF88C2C54146C003E4297 /* LocalizedConstants.swift */,
 				8CABF87D2C541152003E4297 /* Theme.swift */,
 				8CABF88E2C5414E0003E4297 /* AppColor.swift */,
+				8CABF8952C54523D003E4297 /* AppImages.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -172,6 +179,24 @@
 				8CABF8722C54013D003E4297 /* Color+Hex.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8CABF8912C544ACB003E4297 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8922C544ADA003E4297 /* Authentication */,
+				8CABF8742C5409B2003E4297 /* Splash */,
+				8CABF8712C53FEEB003E4297 /* TabbarController */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8CABF8922C544ADA003E4297 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8932C544AF8003E4297 /* LoginView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +276,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CABF8692C53F45A003E4297 /* MockVerticalListView.swift in Sources */,
+				8CABF8962C54523D003E4297 /* AppImages.swift in Sources */,
+				8CABF89C2C54564C003E4297 /* BorderedButtonStyle.swift in Sources */,
 				8CABF8782C540F06003E4297 /* MockTabView.swift in Sources */,
-				8CABF8532C53AC9E003E4297 /* ContentView.swift in Sources */,
 				8CABF8632C53F3F9003E4297 /* ElevationModifier.swift in Sources */,
 				8CABF87E2C541152003E4297 /* Theme.swift in Sources */,
 				8CABF87C2C541083003E4297 /* Fonts.swift in Sources */,
 				8CABF8612C53F3D5003E4297 /* TabBarController.swift in Sources */,
+				8CABF8982C54557B003E4297 /* TextFieldModifier.swift in Sources */,
 				8CABF88D2C54146C003E4297 /* LocalizedConstants.swift in Sources */,
 				8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */,
 				8CABF86B2C53F49C003E4297 /* ButtonBase.swift in Sources */,
@@ -264,6 +291,7 @@
 				8CABF88F2C5414E0003E4297 /* AppColor.swift in Sources */,
 				8CABF8672C53F455003E4297 /* ViewSafeArea+Ext.swift in Sources */,
 				8CABF8732C54013D003E4297 /* Color+Hex.swift in Sources */,
+				8CABF8942C544AF8003E4297 /* LoginView.swift in Sources */,
 				8CABF8762C5409BB003E4297 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
