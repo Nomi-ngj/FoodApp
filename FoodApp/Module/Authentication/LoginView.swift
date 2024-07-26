@@ -7,10 +7,37 @@
 
 import SwiftUI
 
+
+class MyViewModel: ObservableObject {
+    @Published var primaryColor: Color
+    @Published var backgroundColor: Color
+    @Published var shadowColor: Color
+    
+    init(colorScheme: ColorScheme) {
+        // Initialize colors based on the provided color scheme
+        self.primaryColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.primaryColor
+        self.backgroundColor = colorScheme == .dark ? Theme.color.blackColor : Theme.color.whiteColor
+        self.shadowColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.borderTintInputColor
+    }
+    
+    func updateColors(for colorScheme: ColorScheme) {
+        // Update colors based on the new color scheme
+        self.primaryColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.primaryColor
+        self.backgroundColor = colorScheme == .dark ? Theme.color.blackColor : Theme.color.whiteColor
+        self.shadowColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.borderTintInputColor
+    }
+}
+
 struct LoginView: View {
     
-    let primaryColor = Theme.color.primaryColor
+    @Environment(\.colorScheme) private var colorScheme
+    @ObservedObject private var viewModel: MyViewModel
+
+    init() {
+        viewModel = MyViewModel(colorScheme: .light)
+    }
     @State private var isTabBarActive = false
+
 
     var body: some View {
         
@@ -27,7 +54,7 @@ struct LoginView: View {
                 Text(Theme.localized.welcome)
                     .font(Theme.fonts.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(primaryColor) // Adjust color as needed
+                    .foregroundColor(viewModel.primaryColor) // Adjust color as needed
                 
                 Spacer()
                 
@@ -38,7 +65,7 @@ struct LoginView: View {
                         pushTabbar()
                     }) {
                         ZStack {
-                            socialButtonWithIcon(filledColor: .white, image: Image("google"))
+                            socialButtonWithIcon(filledColor: viewModel.backgroundColor, image: Image("google"))
                         }
                     }
                     
@@ -65,10 +92,10 @@ struct LoginView: View {
                 // Email and Password Fields
                 VStack {
                     TextField(Theme.localized.emailAddress, text: .constant(""))
-                        .customTextFieldStyle()
+                        .customTextFieldStyle(backgroundColor: viewModel.backgroundColor)
                     
                     SecureField(Theme.localized.password, text: .constant(""))
-                        .customTextFieldStyle()
+                        .customTextFieldStyle(backgroundColor: viewModel.backgroundColor)
                     
                     HStack {
                         Spacer()
@@ -77,7 +104,7 @@ struct LoginView: View {
                         }) {
                             Text(Theme.localized.forgotPassword)
                                 .font(Theme.fonts.caption2)
-                                .foregroundColor(primaryColor)
+                                .foregroundColor(viewModel.primaryColor)
                         }
                     }
                 }.padding(.bottom, 20)
@@ -90,14 +117,14 @@ struct LoginView: View {
                     }) {
                         Text(Theme.localized.login)
                     }
-                    .buttonStyle(BorderedButtonStyle(borderColor: primaryColor, foregroundColor: .white, backgroundColor: primaryColor, font: Theme.fonts.subhead2))
+                    .buttonStyle(BorderedButtonStyle(borderColor: viewModel.primaryColor, foregroundColor: viewModel.backgroundColor, backgroundColor: viewModel.primaryColor, font: Theme.fonts.subhead2))
                     
                     Button(action: {
                         // Register action
                     }) {
                         Text(Theme.localized.register)
                     }
-                    .buttonStyle(BorderedButtonStyle(borderColor: primaryColor, foregroundColor: primaryColor, backgroundColor: .white, font: Theme.fonts.subhead2))
+                    .buttonStyle(BorderedButtonStyle(borderColor: viewModel.primaryColor, foregroundColor: viewModel.primaryColor, backgroundColor: viewModel.backgroundColor, font: Theme.fonts.subhead2))
                          
                 }.padding(.bottom, 20)
                 
@@ -110,7 +137,7 @@ struct LoginView: View {
                 }) {
                     Text(Theme.localized.skipAndContinueAsaGuest)
                         .font(Theme.fonts.caption1)
-                        .foregroundColor(primaryColor)
+                        .foregroundColor(viewModel.primaryColor)
                 }
                 
                 Spacer()
@@ -124,7 +151,15 @@ struct LoginView: View {
                 )
             }
             .padding()
-            .background(Color.white.edgesIgnoringSafeArea(.all))
+            .background(viewModel.backgroundColor.edgesIgnoringSafeArea(.all))
+            .onAppear {
+                // Update ViewModel when the view appears
+                viewModel.updateColors(for: colorScheme)
+            }
+            .onChange(of: colorScheme) { newColorScheme in
+                // Update ViewModel when the color scheme changes
+                viewModel.updateColors(for: newColorScheme)
+            }
         }
     }
     
@@ -139,7 +174,7 @@ struct LoginView: View {
                 .fill(filledColor) // You can change the color as needed
                 .frame(width: 50, height: 50) // Set the size of the rectangle
                 .cornerRadius(15) // Set the corner radius
-                .shadow(color: Theme.color.borderTintInputColor, radius: 4, x: 0, y: 3) // Add shadow with specified color, radius, and offset
+                .shadow(color: viewModel.shadowColor, radius: 2, x: 1, y: 2) // Add shadow with specified color, radius, and offset
             
             image
                 .resizable()

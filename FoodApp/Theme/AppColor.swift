@@ -40,7 +40,7 @@ enum AppColor:Int{
         UIApplication.shared.delegate?.window??.tintColor = UIColor(resource: .appPrimary)
         NotificationCenter.default.post(name: .themeChanged, object: nil)
     }
-
+    
     var primaryColor: Color { return UIColor(resource: .appPrimary).toColor }
     var secondaryColor: Color { return UIColor(resource: .appSecondary).toColor }
     var tealColor: Color { return UIColor(resource: .appTeal).toColor }
@@ -48,8 +48,8 @@ enum AppColor:Int{
     var textSecondaryColor: Color { return UIColor(resource: .appTextSecondary).toColor }
     var textTertiaryColor: Color { return UIColor(resource: .appTextTertiary).toColor }
     var placeholderTextColor: Color { return UIColor(resource: .appPlaceholderText).toColor }
-    var blackColor: Color { return UIColor.black.toColor }
-    var whiteColor: Color { return UIColor.white.toColor }
+    var blackColor: Color { return UIColor(resource: .appBlack).toColor }
+    var whiteColor: Color { return UIColor(resource: .appWhite).toColor }
     var placeholderBgColor: Color { return UIColor(resource: .appPlaceholderBg).toColor }
     var borderTintInputColor: Color { return UIColor(resource: .appBorderTintInput).toColor }
     var disabledColor: Color { return UIColor(resource: .appDisabled).toColor }
