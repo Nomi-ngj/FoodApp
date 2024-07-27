@@ -39,52 +39,60 @@ class MyAccountViewModel: ObservableObject {
     }
     
     func destinationView(for section: MyAccountSection) -> some View {
+        let underConstruction = UnderConstructionView()
+            .navigationTitle(sectionTitle(for: section))
+            .customBackButton()
+        
         switch section {
         case .profile:
             // Navigate to Profile View
             debugPrint("Profile selected")
-            return AnyView(ProfileView(user: user))
+            let view = ProfileView(user: user)
+                .navigationTitle(sectionTitle(for: section))
+                .customBackButton()
+            return AnyView(view)
+            
         case .settings:
             // Navigate to Settings View
             debugPrint("Settings selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .language:
             // Navigate to Language View
             debugPrint("Language selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .notifications:
             // Navigate to Notifications View
             debugPrint("Notifications selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .aboutFoodApp:
             // Navigate to About Food App View
             debugPrint("About Food App selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .termsAndConditions:
             // Navigate to Terms and Conditions View
             debugPrint("Terms and Conditions selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .privacyPolicy:
             // Navigate to Privacy Policy View
             debugPrint("Privacy Policy selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .appTips:
             // Navigate to App Tips View
             debugPrint("App Tips selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .shareThisApp:
             // Share the app
             debugPrint("Share This App selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .delete:
             // Handle account deletion
             debugPrint("Delete Account selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         case .logout:
             // Handle logout
             Theme.sessionManager.clearSession()
             debugPrint("Logout selected")
-            return AnyView(UnderConstructionView())
+            return AnyView(underConstruction)
         }
     }
     

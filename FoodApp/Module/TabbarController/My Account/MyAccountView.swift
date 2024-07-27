@@ -42,7 +42,6 @@ struct MyAccountView: View {
                 }
             }
         }
-        .navigationTitle(Theme.localized.myAccount)
     }
 
 }

@@ -46,13 +46,17 @@ struct TabBarController: View {
     func tabView(for viewType: TabViewType) -> some View {
         switch viewType {
         case .home:
-            MockTabView(text: "Home Tab Content")
+            MockTabView()
+                .navigationTitle(Theme.localized.home)
         case .orders:
-            MockTabView(text: "Order Tab Content")
+            MockTabView()
+                .navigationTitle(Theme.localized.myOrders)
         case .favorites:
-            MockTabView(text: "Favorite Tab Content")
+            MockTabView()
+                .navigationTitle(Theme.localized.myFavorites)
         case .profile:
             MyAccountView(viewModel: .init(colorScheme: .light, user: User.user))
+                .navigationTitle(Theme.localized.myAccount)
         }
     }
     

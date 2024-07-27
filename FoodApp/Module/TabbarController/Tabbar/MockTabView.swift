@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct MockTabView: View {
-    var text:String
-    init(text: String) {
-        self.text = text
-    }
+    
     var body: some View {
-        Text(text)
         ScrollView{
             MockVerticalListView()
         }

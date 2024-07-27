@@ -37,8 +37,6 @@ struct ProfileView: View {
                     .font(Theme.fonts.caption2)
             }
         }
-        .navigationTitle(Theme.localized.profile)
-        .customBackButton()
     }
 }
 

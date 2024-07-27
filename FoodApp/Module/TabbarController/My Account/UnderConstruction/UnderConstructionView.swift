@@ -18,24 +18,23 @@ struct UnderConstructionView: View {
                 .edgesIgnoringSafeArea(.all)
             
             // Content
-            VStack(spacing: 20) {
+            VStack {
                 // Warning Icon
                 Image(systemName: "exclamationmark.triangle.fill")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.appWarning)
                     .frame(width: 100, height: 100)
                 
                 // Message
                 Text(message)
-                    .font(.title)
-                    .fontWeight(.medium)
+                    .font(Theme.fonts.title2)
                     .foregroundColor((colorScheme == .light ? Theme.color.blackColor:Theme.color.whiteColor))
                     .multilineTextAlignment(.center)
                     .padding()
             }
             .padding()
-            .background(Color.gray.opacity(0.1))
+            .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
             .shadow(radius: 10)
         }
