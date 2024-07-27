@@ -27,5 +27,5 @@ struct Theme {
 //    static let utility = UtilityManager.shared
 //    
 //    /// The session manager for managing user sessions.
-//    static let sessionManager = SessionManager()
+    static let sessionManager = SessionManager()
 }

@@ -34,6 +34,17 @@
 		8CABF8982C54557B003E4297 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8972C54557B003E4297 /* TextFieldModifier.swift */; };
 		8CABF89C2C54564C003E4297 /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */; };
 		8CABF89E2C546289003E4297 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF89D2C546289003E4297 /* LoginViewModel.swift */; };
+		8CABF8A22C546357003E4297 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8A12C546357003E4297 /* SignUpView.swift */; };
+		8CABF8A42C5466E4003E4297 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8A32C5466E4003E4297 /* SignUpViewModel.swift */; };
+		8CABF8A82C546CBE003E4297 /* MyAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8A72C546CBE003E4297 /* MyAccountView.swift */; };
+		8CABF8AA2C546EA7003E4297 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8A92C546EA7003E4297 /* SessionManager.swift */; };
+		8CABF8AD2C547360003E4297 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8AC2C547360003E4297 /* ProfileView.swift */; };
+		8CABF8AF2C5477D9003E4297 /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8AE2C5477D9003E4297 /* ProfileImage.swift */; };
+		8CABF8B12C547AAC003E4297 /* MyAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8B02C547AAC003E4297 /* MyAccountViewModel.swift */; };
+		8CABF8B32C547D87003E4297 /* UnderConstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8B22C547D87003E4297 /* UnderConstructionView.swift */; };
+		8CABF8B62C5540B6003E4297 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8B52C5540B6003E4297 /* User.swift */; };
+		8CABF8B82C5540D1003E4297 /* MyAccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8B72C5540D1003E4297 /* MyAccountSection.swift */; };
+		8CABF8BA2C556108003E4297 /* CustomBackButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8B92C556108003E4297 /* CustomBackButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +77,17 @@
 		8CABF8972C54557B003E4297 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		8CABF89B2C54564C003E4297 /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
 		8CABF89D2C546289003E4297 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8CABF8A12C546357003E4297 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8CABF8A32C5466E4003E4297 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8CABF8A72C546CBE003E4297 /* MyAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountView.swift; sourceTree = "<group>"; };
+		8CABF8A92C546EA7003E4297 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		8CABF8AC2C547360003E4297 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8CABF8AE2C5477D9003E4297 /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		8CABF8B02C547AAC003E4297 /* MyAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewModel.swift; sourceTree = "<group>"; };
+		8CABF8B22C547D87003E4297 /* UnderConstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionView.swift; sourceTree = "<group>"; };
+		8CABF8B52C5540B6003E4297 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8CABF8B72C5540D1003E4297 /* MyAccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountSection.swift; sourceTree = "<group>"; };
+		8CABF8B92C556108003E4297 /* CustomBackButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +144,8 @@
 		8CABF8712C53FEEB003E4297 /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				8CABF85E2C53F3D5003E4297 /* TabViewType.swift */,
-				8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */,
-				8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */,
-				8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */,
-				8CABF85F2C53F3D5003E4297 /* TabBarController.swift */,
-				8CABF8772C540F06003E4297 /* MockTabView.swift */,
+				8CABF8A62C546CA8003E4297 /* My Account */,
+				8CABF8A52C546C9C003E4297 /* Tabbar */,
 			);
 			path = TabbarController;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 				8CABF87D2C541152003E4297 /* Theme.swift */,
 				8CABF88E2C5414E0003E4297 /* AppColor.swift */,
 				8CABF8952C54523D003E4297 /* AppImages.swift */,
+				8CABF8A92C546EA7003E4297 /* SessionManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -179,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8CABF8722C54013D003E4297 /* Color+Hex.swift */,
+				8CABF8B92C556108003E4297 /* CustomBackButtonModifier.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,10 +216,71 @@
 		8CABF8922C544ADA003E4297 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				8CABF8A02C546320003E4297 /* Registration */,
+				8CABF89F2C546314003E4297 /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8CABF89F2C546314003E4297 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				8CABF8932C544AF8003E4297 /* LoginView.swift */,
 				8CABF89D2C546289003E4297 /* LoginViewModel.swift */,
 			);
-			path = Authentication;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8CABF8A02C546320003E4297 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8A12C546357003E4297 /* SignUpView.swift */,
+				8CABF8A32C5466E4003E4297 /* SignUpViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		8CABF8A52C546C9C003E4297 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF85E2C53F3D5003E4297 /* TabViewType.swift */,
+				8CABF8682C53F45A003E4297 /* MockVerticalListView.swift */,
+				8CABF8662C53F455003E4297 /* ViewSafeArea+Ext.swift */,
+				8CABF8622C53F3F9003E4297 /* ElevationModifier.swift */,
+				8CABF85F2C53F3D5003E4297 /* TabBarController.swift */,
+				8CABF8772C540F06003E4297 /* MockTabView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		8CABF8A62C546CA8003E4297 /* My Account */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8B42C547D8B003E4297 /* UnderConstruction */,
+				8CABF8AB2C547329003E4297 /* Profile */,
+				8CABF8A72C546CBE003E4297 /* MyAccountView.swift */,
+				8CABF8B02C547AAC003E4297 /* MyAccountViewModel.swift */,
+				8CABF8B72C5540D1003E4297 /* MyAccountSection.swift */,
+			);
+			path = "My Account";
+			sourceTree = "<group>";
+		};
+		8CABF8AB2C547329003E4297 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8AC2C547360003E4297 /* ProfileView.swift */,
+				8CABF8AE2C5477D9003E4297 /* ProfileImage.swift */,
+				8CABF8B52C5540B6003E4297 /* User.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8CABF8B42C547D8B003E4297 /* UnderConstruction */ = {
+			isa = PBXGroup;
+			children = (
+				8CABF8B22C547D87003E4297 /* UnderConstructionView.swift */,
+			);
+			path = UnderConstruction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,24 +360,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CABF8692C53F45A003E4297 /* MockVerticalListView.swift in Sources */,
+				8CABF8B82C5540D1003E4297 /* MyAccountSection.swift in Sources */,
+				8CABF8AA2C546EA7003E4297 /* SessionManager.swift in Sources */,
 				8CABF8962C54523D003E4297 /* AppImages.swift in Sources */,
 				8CABF89C2C54564C003E4297 /* BorderedButtonStyle.swift in Sources */,
 				8CABF8782C540F06003E4297 /* MockTabView.swift in Sources */,
 				8CABF8632C53F3F9003E4297 /* ElevationModifier.swift in Sources */,
 				8CABF87E2C541152003E4297 /* Theme.swift in Sources */,
 				8CABF87C2C541083003E4297 /* Fonts.swift in Sources */,
+				8CABF8B32C547D87003E4297 /* UnderConstructionView.swift in Sources */,
+				8CABF8BA2C556108003E4297 /* CustomBackButtonModifier.swift in Sources */,
+				8CABF8B12C547AAC003E4297 /* MyAccountViewModel.swift in Sources */,
+				8CABF8AF2C5477D9003E4297 /* ProfileImage.swift in Sources */,
 				8CABF8612C53F3D5003E4297 /* TabBarController.swift in Sources */,
 				8CABF8982C54557B003E4297 /* TextFieldModifier.swift in Sources */,
 				8CABF88D2C54146C003E4297 /* LocalizedConstants.swift in Sources */,
 				8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */,
 				8CABF86B2C53F49C003E4297 /* ButtonBase.swift in Sources */,
 				8CABF8602C53F3D5003E4297 /* TabViewType.swift in Sources */,
+				8CABF8A42C5466E4003E4297 /* SignUpViewModel.swift in Sources */,
+				8CABF8A82C546CBE003E4297 /* MyAccountView.swift in Sources */,
+				8CABF8AD2C547360003E4297 /* ProfileView.swift in Sources */,
+				8CABF8B62C5540B6003E4297 /* User.swift in Sources */,
 				8CABF88F2C5414E0003E4297 /* AppColor.swift in Sources */,
 				8CABF8672C53F455003E4297 /* ViewSafeArea+Ext.swift in Sources */,
 				8CABF8732C54013D003E4297 /* Color+Hex.swift in Sources */,
 				8CABF8942C544AF8003E4297 /* LoginView.swift in Sources */,
 				8CABF89E2C546289003E4297 /* LoginViewModel.swift in Sources */,
 				8CABF8762C5409BB003E4297 /* SplashScreenView.swift in Sources */,
+				8CABF8A22C546357003E4297 /* SignUpView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

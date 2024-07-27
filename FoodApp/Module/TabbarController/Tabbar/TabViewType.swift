@@ -8,11 +8,24 @@
 import Foundation
 
 
-enum TabViewType:String, CaseIterable {
-    case home = "Home"
-    case orders = "My Order"
-    case favorites = "My Favorites"
-    case profile = "My Account"
+enum TabViewType: CaseIterable {
+    case home
+    case orders
+    case favorites
+    case profile
+    
+    var title:String {
+        switch self {
+        case .home:
+            return Theme.localized.home
+        case .orders:
+            return Theme.localized.myOrders
+        case .favorites:
+            return Theme.localized.myFavorites
+        case .profile:
+            return Theme.localized.myAccount
+        }
+    }
     
     var imageNameActive:String{
         switch self {

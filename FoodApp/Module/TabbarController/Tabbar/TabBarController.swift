@@ -7,21 +7,36 @@
 
 import SwiftUI
 
+class TabBarViewModel: ObservableObject{
+    
+    @Published var selectionColor:Color = Theme.color.primaryColor
+    @Binding var showTopBar:Bool
+    let unSelectionColor = Theme.color.disabledColor
+    let fontLabel:Font = Theme.fonts.caption4
+    
+    init(colorScheme: ColorScheme, showTopBar:Binding<Bool>) {
+        self.selectionColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.primaryColor
+        _showTopBar = showTopBar
+    }
+    
+    func updateColors(for colorScheme: ColorScheme) {
+        // Update colors based on the new color scheme
+        self.selectionColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.primaryColor
+    }
+    
+}
+
 struct TabBarController: View {
     
     struct TabItem {
         var viewType: TabViewType
     }
-    
+    @ObservedObject var viewModel:TabBarViewModel = .init(colorScheme: .light, showTopBar: .constant(false))
     @State private var selectedTab: TabViewType
     @State private var tabOpacity = 0.0
     @Environment(\.colorScheme) private var colorScheme
     
     let tabs: [TabItem]
-    private let fontLabel:Font = Theme.fonts.caption4
-    private let selectionColor = Theme.color.primaryColor
-    private let unSelectionColor = Theme.color.disabledColor
-    private let showTopBar = false
     init(tabs: [TabItem]) {
         self.tabs = tabs
         _selectedTab = State(initialValue: tabs.first!.viewType)
@@ -37,7 +52,7 @@ struct TabBarController: View {
         case .favorites:
             MockTabView(text: "Favorite Tab Content")
         case .profile:
-            MockTabView(text: "Account Tab Content")
+            MyAccountView(viewModel: .init(colorScheme: .light, user: User.user))
         }
     }
     
@@ -54,7 +69,7 @@ struct TabBarController: View {
                         }
                     }) {
                         VStack {
-                            if showTopBar {
+                            if viewModel.showTopBar {
                                 if tab.viewType == selectedTab {
                                     Rectangle()
                                         .frame(height: 3)
@@ -72,11 +87,11 @@ struct TabBarController: View {
                                 .frame(width: 25, height: 25, alignment: .center)
                             
                             if tab.viewType == selectedTab{
-                                Text(tab.viewType.rawValue)
-                                    .font(fontLabel)
+                                Text(tab.viewType.title)
+                                    .font(viewModel.fontLabel)
                             }
                         }
-                        .foregroundColor(tab.viewType == selectedTab ? selectionColor : (colorScheme == .dark ? Color.white: unSelectionColor))
+                        .foregroundColor((tab.viewType == selectedTab ? viewModel.selectionColor : viewModel.unSelectionColor))
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -88,6 +103,12 @@ struct TabBarController: View {
                 withAnimation(.easeIn(duration: 0.5)) {
                     tabOpacity = 1.0
                 }
+                // Update ViewModel when the view appears
+                viewModel.updateColors(for: colorScheme)
+            }
+            .onChange(of: colorScheme) { newColorScheme in
+                // Update ViewModel when the color scheme changes
+                viewModel.updateColors(for: newColorScheme)
             }
             
         }
