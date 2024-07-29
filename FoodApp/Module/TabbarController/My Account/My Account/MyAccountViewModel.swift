@@ -12,7 +12,8 @@ class MyAccountViewModel: ObservableObject {
     @Published var user: User
     @Published var isLogout: Bool = false
     
-    init(colorScheme: ColorScheme, user: User) {
+
+    init(user: User, colorScheme: ColorScheme) {
         self.user = user
         self.primaryColor = colorScheme == .dark ? Theme.color.whiteColor : Theme.color.primaryColor
     }
@@ -55,7 +56,10 @@ class MyAccountViewModel: ObservableObject {
         case .settings:
             // Navigate to Settings View
             debugPrint("Settings selected")
-            return AnyView(underConstruction)
+            let view = SettingsView()
+                .navigationTitle(sectionTitle(for: section))
+                .customBackButton()
+            return AnyView(view)
         case .language:
             // Navigate to Language View
             debugPrint("Language selected")

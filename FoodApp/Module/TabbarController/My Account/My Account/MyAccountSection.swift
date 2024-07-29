@@ -9,9 +9,9 @@ import Foundation
 
 enum MyAccountSection: String, CaseIterable, Identifiable {
     case profile
+    case notifications
     case settings
     case language
-    case notifications
     case aboutFoodApp
     case termsAndConditions
     case privacyPolicy

@@ -55,7 +55,7 @@ struct TabBarController: View {
             MockTabView()
                 .navigationTitle(Theme.localized.myFavorites)
         case .profile:
-            MyAccountView(viewModel: .init(colorScheme: .light, user: User.user))
+            MyAccountView(viewModel: .init(user: User.user, colorScheme: colorScheme))
                 .navigationTitle(Theme.localized.myAccount)
         }
     }

@@ -33,6 +33,26 @@ class SessionManager:NSObject{
         }
     }
     
+    var isNotificationEnabled:Bool{
+        set{
+            userDefault.set(newValue, forKey: "NotificationEnabled")
+            userDefault.synchronize()
+        }
+        get{
+            return userDefault.bool(forKey: "NotificationEnabled")
+        }
+    }
+    
+    var isSecurityEnabled:Bool{
+        set{
+            userDefault.set(newValue, forKey: "SecurityEnabled")
+            userDefault.synchronize()
+        }
+        get{
+            return userDefault.bool(forKey: "SecurityEnabled")
+        }
+    }
+    
 }
 
 public extension UserDefaults {
