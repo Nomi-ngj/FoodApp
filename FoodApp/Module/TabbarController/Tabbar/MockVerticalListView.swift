@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct MockVerticalListView: View {
+    @EnvironmentObject var appManager: AppContainerManager
+
     var body: some View {
-        VStack(spacing: 12){
-            ForEach(1...30,id: \.self) {index in
-                
-                HStack(spacing: 15){
-                    ZStack{
+        VStack(spacing: 12) {
+            ForEach(1...30, id: \.self) { index in
+                HStack(spacing: 15) {
+                    ZStack {
                         Circle()
-                            .fill(Color.gray.opacity (0.5))
+                            .fill(Color.gray.opacity(0.5))
                             .frame(width: 60, height: 60)
                         Text("\(index)")
                             .foregroundColor(.secondary)
                             .font(.body)
                     }
-                    
-                    
-                    VStack(alignment: .leading, spacing: 6, content: {
+
+                    VStack(alignment: .leading, spacing: 6) {
                         RoundedRectangle(cornerRadius: 4)
                             .fill(Color.gray.opacity(0.5))
                             .frame(height: 22)
@@ -35,12 +35,15 @@ struct MockVerticalListView: View {
                             .fill(Color.gray.opacity(0.5))
                             .frame(height: 22)
                             .padding(.trailing, 160)
-                    })
+                    }
                 }
             }
-        }.padding()
+        }
+        .padding()
+        .preferredColorScheme(appManager.colorScheme) // Apply color scheme here
     }
 }
+
 
 //#if DEBUG
 //#Preview{

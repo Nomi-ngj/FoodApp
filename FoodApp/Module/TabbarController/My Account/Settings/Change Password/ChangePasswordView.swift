@@ -11,7 +11,8 @@ struct ChangePasswordView: View {
     @State private var currentPassword: String = ""
     @State private var newPassword: String = ""
     @State private var confirmPassword: String = ""
-    
+    @EnvironmentObject var appManager: AppContainerManager
+
     var body: some View {
         Form {
             Section(header: Text("Change Password")) {

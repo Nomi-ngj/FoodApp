@@ -11,6 +11,7 @@
 		8CA2AA7E2C57BB7200BD8E8A /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2AA7D2C57BB7200BD8E8A /* ChangePasswordView.swift */; };
 		8CA2AA822C57BBA400BD8E8A /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2AA812C57BBA400BD8E8A /* ContactUsView.swift */; };
 		8CA2AA842C57BBB100BD8E8A /* FAQsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2AA832C57BBB100BD8E8A /* FAQsView.swift */; };
+		8CA2AA862C58721300BD8E8A /* AppContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA2AA852C58721300BD8E8A /* AppContainerManager.swift */; };
 		8CABF8512C53AC9E003E4297 /* FoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF8502C53AC9E003E4297 /* FoodApp.swift */; };
 		8CABF8552C53ACA0003E4297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8542C53ACA0003E4297 /* Assets.xcassets */; };
 		8CABF8582C53ACA0003E4297 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CABF8572C53ACA0003E4297 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		8CA2AA7D2C57BB7200BD8E8A /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		8CA2AA812C57BBA400BD8E8A /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		8CA2AA832C57BBB100BD8E8A /* FAQsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsView.swift; sourceTree = "<group>"; };
+		8CA2AA852C58721300BD8E8A /* AppContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerManager.swift; sourceTree = "<group>"; };
 		8CABF84D2C53AC9E003E4297 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CABF8502C53AC9E003E4297 /* FoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp.swift; sourceTree = "<group>"; };
 		8CABF8542C53ACA0003E4297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,16 +113,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CA2AA792C57BB0100BD8E8A /* My Account */ = {
-			isa = PBXGroup;
-			children = (
-				8CABF8A72C546CBE003E4297 /* MyAccountView.swift */,
-				8CABF8B02C547AAC003E4297 /* MyAccountViewModel.swift */,
-				8CABF8B72C5540D1003E4297 /* MyAccountSection.swift */,
-			);
-			path = "My Account";
-			sourceTree = "<group>";
-		};
 		8CA2AA7C2C57BB4900BD8E8A /* Change Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +163,7 @@
 				8CABF8792C54105C003E4297 /* View */,
 				8CABF86D2C53F795003E4297 /* Info.plist */,
 				8CABF8502C53AC9E003E4297 /* FoodApp.swift */,
+				8CA2AA852C58721300BD8E8A /* AppContainerManager.swift */,
 				8CABF8542C53ACA0003E4297 /* Assets.xcassets */,
 				8CABF8562C53ACA0003E4297 /* Preview Content */,
 			);
@@ -300,7 +293,9 @@
 		8CABF8A62C546CA8003E4297 /* My Account */ = {
 			isa = PBXGroup;
 			children = (
-				8CA2AA792C57BB0100BD8E8A /* My Account */,
+				8CABF8A72C546CBE003E4297 /* MyAccountView.swift */,
+				8CABF8B02C547AAC003E4297 /* MyAccountViewModel.swift */,
+				8CABF8B72C5540D1003E4297 /* MyAccountSection.swift */,
 				8CABF8BB2C55B6C8003E4297 /* Settings */,
 				8CABF8B42C547D8B003E4297 /* UnderConstruction */,
 				8CABF8AB2C547329003E4297 /* Profile */,
@@ -417,6 +412,7 @@
 				8CABF8692C53F45A003E4297 /* MockVerticalListView.swift in Sources */,
 				8CA2AA842C57BBB100BD8E8A /* FAQsView.swift in Sources */,
 				8CA2AA7E2C57BB7200BD8E8A /* ChangePasswordView.swift in Sources */,
+				8CA2AA862C58721300BD8E8A /* AppContainerManager.swift in Sources */,
 				8CABF8B82C5540D1003E4297 /* MyAccountSection.swift in Sources */,
 				8CABF8AA2C546EA7003E4297 /* SessionManager.swift in Sources */,
 				8CABF8962C54523D003E4297 /* AppImages.swift in Sources */,

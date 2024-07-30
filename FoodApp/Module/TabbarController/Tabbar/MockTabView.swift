@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct MockTabView: View {
-    
+    @EnvironmentObject var appManager: AppContainerManager
     var body: some View {
         ScrollView{
             MockVerticalListView()
+                .environmentObject(appManager)
         }
+        .environment(\.colorScheme, appManager.colorScheme)
     }
 }

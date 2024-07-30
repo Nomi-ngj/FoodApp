@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject var appManager: AppContainerManager
+    @Environment(\.colorScheme) private var userColorScheme
     @ObservedObject private var viewModel: LoginViewModel
     @State private var isTabBarActive = false
     @State private var isRegistered = false
@@ -122,14 +123,16 @@ struct LoginView: View {
             // NavigationLink Tabbar Controller
             NavigationLink(
                 destination: TabBarController(tabs: TabViewType.allCases.map { TabBarController.TabItem(viewType: $0) })
+                    .environmentObject(appManager)
                     .navigationBarBackButtonHidden(true), // Hide back button
                 isActive: $isTabBarActive,
                 label: { EmptyView() }
             )
             
+//            .environmentObject(colorSchemeManager)
             // NavigationLink SignUp
             NavigationLink(
-                destination: SignUpView(viewModel: .init(colorScheme: colorScheme, isTabBarActive: $isTabBarActive)),
+                destination: SignUpView(viewModel: .init(colorScheme: appManager.colorScheme, isTabBarActive: $isTabBarActive)),
                 isActive: $isRegistered,
                 label: { EmptyView() }
             )
@@ -138,12 +141,13 @@ struct LoginView: View {
         .background(viewModel.backgroundColor.edgesIgnoringSafeArea(.all))
         .onAppear {
             // Update ViewModel when the view appears
-            viewModel.updateColors(for: colorScheme)
+            viewModel.updateColors(for: appManager.colorScheme)
         }
-        .onChange(of: colorScheme) { newColorScheme in
+        .onChange(of: appManager.colorScheme) { newColorScheme in
             // Update ViewModel when the color scheme changes
             viewModel.updateColors(for: newColorScheme)
         }
+        .preferredColorScheme(appManager.colorScheme)
     }
     
     func pushTabbar(){

@@ -34,7 +34,7 @@ struct TabBarController: View {
     @ObservedObject var viewModel:TabBarViewModel = .init(colorScheme: .light, showTopBar: .constant(false))
     @State private var selectedTab: TabViewType
     @State private var tabOpacity = 0.0
-    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject var appManager: AppContainerManager
     
     let tabs: [TabItem]
     init(tabs: [TabItem]) {
@@ -44,19 +44,20 @@ struct TabBarController: View {
     
     @ViewBuilder
     func tabView(for viewType: TabViewType) -> some View {
+        let mockView = MockTabView()
+            .environmentObject(appManager)
+            .navigationTitle(viewType.title)
         switch viewType {
         case .home:
-            MockTabView()
-                .navigationTitle(Theme.localized.home)
+            mockView
         case .orders:
-            MockTabView()
-                .navigationTitle(Theme.localized.myOrders)
+            mockView
         case .favorites:
-            MockTabView()
-                .navigationTitle(Theme.localized.myFavorites)
+            mockView
         case .profile:
-            MyAccountView(viewModel: .init(user: User.user, colorScheme: colorScheme))
+            MyAccountView()
                 .navigationTitle(Theme.localized.myAccount)
+                .environmentObject(appManager)
         }
     }
     
@@ -100,7 +101,7 @@ struct TabBarController: View {
                     .frame(maxWidth: .infinity)
                 }
             }
-            .background(colorScheme == .dark ? Color.black: Color.white)
+            .background(appManager.colorScheme == .dark ? Color.black: Color.white)
             .frame(height: 70)
             .opacity(tabOpacity)
             .onAppear {
@@ -108,13 +109,13 @@ struct TabBarController: View {
                     tabOpacity = 1.0
                 }
                 // Update ViewModel when the view appears
-                viewModel.updateColors(for: colorScheme)
+                viewModel.updateColors(for: appManager.colorScheme)
             }
-            .onChange(of: colorScheme) { newColorScheme in
+            .onChange(of: appManager.colorScheme) { newColorScheme in
                 // Update ViewModel when the color scheme changes
                 viewModel.updateColors(for: newColorScheme)
             }
-            
+            .environment(\.colorScheme, appManager.colorScheme)
         }
     }
 }

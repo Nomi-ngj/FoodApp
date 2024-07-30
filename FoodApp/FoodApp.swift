@@ -10,22 +10,15 @@ import SwiftUI
 @main
 struct FoodAppApp: App {
     @State private var showSplash = true
+    @ObservedObject private var appManager = AppContainerManager()
     
     init() {
-        
         let appearance = UINavigationBarAppearance()
-        
-        // Set the back button text color
         appearance.buttonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(.appPrimary)]
-        
-        // Set the title color
         appearance.titleTextAttributes = [.foregroundColor: UIColor(.appPrimary)]
-        
-        // Apply the appearance settings to the navigation bar
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
-        
     }
        
     
@@ -35,13 +28,16 @@ struct FoodAppApp: App {
                 NavigationView{
                     if showSplash {
                         SplashScreenView(showSplash: $showSplash)
+                            .environmentObject(appManager)
                     } else {
                         if Theme.sessionManager.userProfile != nil {
                             TabBarController(tabs: TabViewType.allCases.map { viewType in
                                 TabBarController.TabItem(viewType: viewType)
                             })
+                            .environmentObject(appManager)
                         }else {
                             LoginView()
+                                .environmentObject(appManager)
                         }
                     }
                 }

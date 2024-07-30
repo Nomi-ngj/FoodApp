@@ -15,8 +15,8 @@ struct SplashScreenView: View {
     @State private var logoOpacity = 0.0
     @State private var taglineOpacity = 0.0
     @State private var taglineOffset: CGFloat = 0
-    @Environment(\.colorScheme) private var colorScheme
-    
+    @EnvironmentObject var appManager: AppContainerManager
+    @Environment(\.colorScheme) private var userColorScheme
     var body: some View {
         VStack {
             Spacer()
@@ -31,6 +31,8 @@ struct SplashScreenView: View {
                         logoOpacity = 1.0
                     }
                 }
+                //.preferredColorScheme(/*appManager*/.colorScheme)
+//                .foregroundColor((appManager.colorScheme == .light ? Theme.color.whiteColor : Theme.color.blackColor).edgesIgnoringSafeArea(.all))
             
             Text(Theme.localized.appName)
                 .font(Theme.fonts.title3)
@@ -46,9 +48,15 @@ struct SplashScreenView: View {
             
             Spacer()
         }
-        .background((colorScheme == .light ? Theme.color.whiteColor : Theme.color.blackColor).edgesIgnoringSafeArea(.all)) // Set background color as needed
+        .background(Color.clear)
+        .onChange(of: userColorScheme) { newColorScheme in
+            // Update ViewModel when the color scheme changes
+            appManager.isDarkMode = newColorScheme == .dark
+        }
         .onAppear {
             // Duration of splash screen before transitioning to the next view
+            appManager.isDarkMode = userColorScheme == .dark
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 // Navigate to the next view or perform your transition
                 withAnimation {
@@ -56,5 +64,6 @@ struct SplashScreenView: View {
                 }
             }
         }
+        .environment(\.colorScheme, appManager.colorScheme)
     }
 }

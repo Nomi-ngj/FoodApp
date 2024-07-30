@@ -20,15 +20,8 @@ class SettingsViewModel: ObservableObject {
         }
     }
     
-    @Published var isDarkMode: Bool = false
-    
     init(){
         notificationsEnabled = Theme.sessionManager.isNotificationEnabled
         faceIDEnabled = Theme.sessionManager.isSecurityEnabled
-    }
-    
-    func currentColorScheme(colorScheme:ColorScheme){
-        self.isDarkMode = colorScheme == .dark ? true:false
-        
     }
 }

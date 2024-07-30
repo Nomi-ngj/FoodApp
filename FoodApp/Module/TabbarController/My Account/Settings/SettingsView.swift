@@ -11,12 +11,12 @@ import SwiftUI
 struct SettingsView: View {
     @ObservedObject private var viewModel = SettingsViewModel()
     
-    @Environment(\.colorScheme) private var colorScheme
-    
+    @EnvironmentObject var appManager: AppContainerManager
+
     var body: some View {
         Form {
             Section(header: Text("Appearance")) {
-                Toggle(isOn: $viewModel.isDarkMode) {
+                Toggle(isOn: $appManager.isDarkMode) {
                     Text("Dark Mode")
                 }
             }
@@ -29,8 +29,9 @@ struct SettingsView: View {
                 Toggle(isOn: $viewModel.faceIDEnabled) {
                     Text("Enable Face ID / Touch ID")
                 }
-                
-                NavigationLink(destination: ChangePasswordView()) {
+                let changePasswordView = ChangePasswordView()
+                    .environmentObject(appManager)
+                NavigationLink(destination: changePasswordView) {
                     Text("Change Password")
                 }
             }
@@ -45,10 +46,6 @@ struct SettingsView: View {
                 }
             }
         }
-        .onAppear{
-            viewModel.isDarkMode = colorScheme == .dark
-            viewModel.currentColorScheme(colorScheme: colorScheme)
-        }
-        .environment(\.colorScheme, viewModel.isDarkMode ? .dark : .light)
+        .environment(\.colorScheme, appManager.colorScheme)
     }
 }
